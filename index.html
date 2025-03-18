@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Índice de Juegos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: url("images/fondo2.jpg");
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: rgba(4, 4, 4, 0.425);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    h1 {
+      color: #ffffff;
+      text-align: center;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin: 15px 0;
+    }
+    a {
+      display: inline-block;
+      background-color: #28a745;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      width: 200px;
+      text-align: center;
+    }
+    a:hover {
+      background-color: #1e7e34;
+    }
+
+    /* Ajustes responsivos para pantallas pequeñas */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5em;
+      }
+      a {
+        padding: 8px 12px;
+        font-size: 0.9em;
+        width: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Índice de Juegos</h1>
+    <ul>
+      <li><a href="memoria.html"> ¿Qué falta?</a></li>
+      <li><a href="rompecabezas.html"> Rompecabezas Simples</a></li>
+      <li><a href="intruso.html"> Encuentra el Intruso</a></li>
+      <li><a href="ordenar.html"> Ordenar por Tamaño</a></li>
+      <li><a href="n-back.html"> N-Back-Memoria</a></li>
+      <li><a href="n-laberinto.html"> N-Back-Razonamiento</a></li>
+    </ul>
+  </div>
+</body>
+</html>
