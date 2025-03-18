@@ -1,0 +1,159 @@
+/* General Styles and Variables */
+:root {
+	--game-border: #000000;
+	--screen-color: rgba(0, 0, 0, 0.6);
+	--btns-color: #858585;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Body */
+.body {
+	color: #fff;
+	background: url("fondo2.jpg");
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+	display: flex;
+	align-items: center;
+	align-content: space-around;
+	justify-content: center;
+	
+	flex-wrap: wrap;
+	flex-direction: row;
+	
+	min-width: 100vw;
+	min-height: 100vh;
+	padding-top: 20px;
+}
+
+/* Game Screen */
+.game-screen-container {
+	position: relative;
+}
+.game-screen {
+	border-radius: 8px;
+	background-color: var(--screen-color);
+	border: 4px solid var(--game-border);
+}
+
+.game-menu {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	
+	top: 0;
+
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.game-menu__item {
+	width: 40%;
+	padding: 15px;
+	border-radius: 15px;
+	background-color: rgba(255, 255, 255, 0.466);
+	border: 2px solid var(--game-border);
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	
+	text-align: center;
+	
+}
+.game-menu__item--title {
+	color: black;
+}
+.game-menu__item--btn {
+	font-size: 15px;
+	padding: 10px 20px;
+}
+
+/* Movement Btns */
+.movement-btns-container {
+	
+}
+
+.movement-btn {
+	width: 100px;
+	padding: 5px 20px;
+	font-size: 18px;
+	
+	border-radius: 8px;
+	border-color: var(--game-border);
+	background-color: var(--btns-color);
+}
+.movement-btn--up, .movement-btn--down { 
+	display: block;
+	margin: 0px auto;
+	font-size: 19px;
+}
+.movement-btn--left, .movement-btn--right, .movement-btn--down {
+	margin-top: 5px;
+}
+
+@media (min-height: 600px) {
+	.movement-btn { font-size: 3vh; }
+	.movement-btn--up, .movement-btn--down { font-size: calc(3vh + 1px); }
+}
+
+/* Game Stats */
+.game-stats-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.a-game-stat {
+	width: 100%;
+	margin: none;
+	display: block;	
+}
+
+/* Shared */
+.game-screen-container, .movement-btns-container, .game-stats-container {
+	width: fit-content;
+}
+.movement-btns-container, .game-stats-container {
+	margin: 20px 15px 0px;
+}
+
+/* Responsividad para dispositivos pequeños */
+@media (max-width: 600px) {
+    .movement-btn {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+    .game-menu {
+        padding: 10px;
+    }
+}
+
+.inactive {
+	display: none;
+}
+
+.back {
+	margin-top: 20px;
+	text-align: center;
+  }
+  .back a {
+	display: inline-block;
+	background-color: #28a745;
+	color: #fff;
+	padding: 10px 15px;
+	border-radius: 5px;
+	text-decoration: none;
+	font-weight: bold;
+	transition: background-color 0.3s;
+  }
+  .back a:hover {
+	background-color: #1e7e34;
+  }
